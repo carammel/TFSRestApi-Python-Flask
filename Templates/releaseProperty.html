@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Service Endpoints Page</title>
+</head>
+<body>
+    <div class="container">
+        <h3>You can find The Properties of Releases of {{ projectName1 }}</h3>
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th scope="col">Release Name:</th>
+                        <th scope="col">Artifact Name:</th>
+                        <th scope="col">Default Build Version</th>
+                    </tr>
+                  </thead>
+                {% for key, val in DE.items() %}
+                  <tbody>
+                    <tr>
+                        <td>{{ val["name"] }}</td>
+                        <td>{{ val["artifacts"][0]["alias"] }}</td>
+                        <td>{{ val["artifacts"][0]["definitionReference"]["defaultVersionType"]["name"]  }}</td>
+                    </tr>
+                  </tbody>
+                    {% endfor %}
+            </table>
+    </div>
+</body>
+</html>

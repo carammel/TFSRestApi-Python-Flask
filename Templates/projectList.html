@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Project List Page</title>
+</head>
+<body>
+    <div class="container">
+        <h3>You can find The Project Lists of the {{ collectionName1 }}</h3>
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th scope="col">Project Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">url</th>
+                    </tr>
+                  </thead>
+                {% for key, val in SE.items() %}
+                  <tbody>
+                    <tr>
+                        <td>{{ val["name"]  }}</td>
+                        <td>{{ val["description"]  }}</td>
+                        <td>{{ val["url"]  }}</td>
+                    </tr>
+                  </tbody>
+                    {% endfor %}
+            </table>
+    </div>
+</body>
+</html>

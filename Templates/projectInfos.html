@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Bilgileri</title>
+</head>
+<body>
+<div class="conv">
+        <div class="">
+            <div class="ConName">Project Name: {{ projectName1 }}</div>
+            {% for key, val in SE.items() %}
+                <div class="ConName">Service EndPoint Name: {{ key }}</div>
+                <div class="ConSubject">Service Endpoint Type: {{ val }}</div>
+            {% endfor %}
+        </div>
+</div>
+<div class="conv">
+        <div class="">
+            <div class="ConName">Project Name: {{ projectName1 }}</div>
+            {% for key, val in SE.items() %}
+                <div class="ConName">Service Hook Name: {{ key }}</div>
+                <div class="ConSubject">Service Hook Type: {{ val }}</div>
+            {% endfor %}
+        </div>
+</div>
+<div class="conv">
+        <div class="">
+            <div class="ConName">Project Name: {{ projectName1 }}</div>
+            {% for key, val in SE.items() %}
+                <div class="ConName">Team Name: {{ key }}</div>
+                <div class="ConSubject">Member Name: {{ val }}</div>
+            {% endfor %}
+        </div>
+</div>
+</body>
+</html>

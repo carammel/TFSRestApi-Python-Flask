@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Service Endpoints Page</title>
+</head>
+<body>
+    <div class="container">
+        <h3>You can find The Properties of Builds of {{ projectName1 }}</h3>
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th scope="col">Build Name:</th>
+                        <th scope="col">Build Type:</th>
+                        <th scope="col">queueStatus:</th>
+                        <th scope="col">Last Created Date:</th>
+                        <th scope="col">Default Drop Location:</th>
+                        <th scope="col">Repository Type:</th>
+                    </tr>
+                  </thead>
+                {% for key, val in xaml.items() %}
+                  <tbody>
+                    <tr>
+                        <td>{{ val["name"] }}</td>
+                        <td>{{ val["type"] }}</td>
+                        <td>{{ val["queueStatus"] }}</td>
+                        <td>{{ val["createdOn"] }}</td>
+                        <td>{{ val["defaultDropLocation"] }}</td>
+                        <td>{{ val["repository"]}}</td>
+                    </tr>
+                  </tbody>
+                    {% endfor %}
+            </table>
+    </div>
+<div class="container">
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th scope="col">Build Name:</th>
+                        <th scope="col">Build Type:</th>
+                        <th scope="col">queueStatus:</th>
+                        <th scope="col">Last Created Date:</th>
+                        <th scope="col">Variables:</th>
+                        <th scope="col">Repository Type:</th>
+                        <th scope="col">Repository tfvcMapping:</th>
+                        <th scope="col">repository defaultBranch:</th>
+                        <th scope="col">repository rootFolder:</th>
+                    </tr>
+                  </thead>
+                {% for key, val in vNext.items() %}
+                  <tbody>
+                    <tr>
+                        <td>{{ val["name"] }}</td>
+                        <td>{{ val["type"] }}</td>
+                        <td>{{ val["queueStatus"] }}</td>
+                        <td>{{ val["createdDate"] }}</td>
+                        <td>{{ val["variables"] }}</td>
+                        <td>{{ val["repository"]["type"] }}</td>
+                        <td>{{ val["repository"]["properties"]["tfvcMapping"] }}</td>
+                        <td>{{ val["repository"]["defaultBranch"] }}</td>
+                        <td>{{ val["repository"]["rootFolder"] }}</td>
+                    </tr>
+                  </tbody>
+                    {% endfor %}
+            </table>
+    </div>
+
+</body>
+</html>

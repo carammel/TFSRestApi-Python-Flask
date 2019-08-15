@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Service Endpoints Page</title>
+</head>
+<body>
+    <div class="container">
+        <h3>You can find The Service Endpoints of the {{ projectName1 }}</h3>
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                      <th scope="col">Service EndPoint Name</th>
+                      <th scope="col">Service Endpoint Type</th>
+                    </tr>
+                  </thead>
+                {% for key, val in SE.items() %}
+                  <tbody>
+                    <tr>
+                      <td>{{ val }}</td>
+                      <td>{{ key }}</td>
+                    </tr>
+                  </tbody>
+                    {% endfor %}
+            </table>
+    </div>
+</body>
+</html>

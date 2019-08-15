@@ -1,0 +1,45 @@
+
+body {
+  font-size: 120%;
+  background: #F8F8FF;
+}
+.container {
+  margin-top: 100px !important;
+}
+
+.conv{
+  border: solid 2px orangered;
+  margin: 2px;
+}
+
+.messagebox{
+  border: solid 2px orangered;
+  margin: 2px;
+  hight: 300px;
+}
+
+.messtext-sended{
+  border: solid 2px;
+  margin: 2px;
+  border-color: aqua;
+}
+.messtext-recived{
+  border: solid 2px;
+  margin: 2px;
+  border-color: blueviolet;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

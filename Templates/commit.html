@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Service Endpoints Page</title>
+</head>
+<body>
+    <div class="container">
+        <h3>You can find The Service Endpoints of the {{ projectName1 }}</h3>
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <td scope="col">Data Source -- Score||kozmos</td>
+                        <td scope="col">Project Name</td>
+                        <td scope="col">When did it?</td>
+                        <td scope="col">Who did commit?</td>
+                        <td scope="col">What is email?</td>
+                        <td scope="col">When did it?</td>
+                        <td scope="col">What is comment?</td>
+                        <td scope="col">How many line added?</td>
+                        <td scope="col">How many line edited?</td>
+                        <td scope="col">How many line deleted?</td>
+                    </tr>
+                  </thead>
+                {% for key, val in DE.items() %}
+                  <tbody>
+                    <tr>
+                        <td>{{ val["author"]["name"] }}</td>
+                        <td>{{ val["author"]["email"] }}</td>
+                        <td>{{ val["author"]["date"] }}</td>
+                        <td>{{ val["comment"]  }}</td>
+                        <td>{{ val["changeCounts"]["Add"] }}</td>
+                        <td>{{ val["changeCounts"]["Edit"] }}</td>
+                        <td>{{ val["changeCounts"]["Delete"] }}</td>
+                    </tr>
+                  </tbody>
+                    {% endfor %}
+            </table>
+    </div>
+</body>
+</html>

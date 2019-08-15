@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Service Endpoints Page</title>
+</head>
+<body>
+    <div class="container">
+        <h3>You can find The Service Hooks of the {{ projectName1 }}</h3>
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th scope="col">Repository Name</th>
+                        <th scope="col">Branch</th>
+                        <th scope="col">CreatedBY</th>
+                        <th scope="col">Created Date</th>
+                        <th scope="col">Event Type</th>
+                        <th scope="col">Consumer ID</th>
+                        <th scope="col">Consumer ActionID</th>
+                        <th scope="col">Action Description</th>
+                    </tr>
+                  </thead>
+                {% for key, val in DE.items() %}
+                  <tbody>
+                    <tr>
+                        <td>{{ val["eventDescription"] }}</td>
+                        <td>{{ val["publisherInputs"]["branch"]  }}</td>
+                        <td>{{ val["createdBy"]["uniqueName"]  }}</td>
+                        <td>{{ val["createdDate"]  }}</td>
+                        <td>{{ val["eventType"] }}</td>
+                        <td>{{ val["consumerId"]  }}</td>
+                        <td>{{ val["consumerActionId"]  }}</td>
+                        <td>{{ val["actionDescription"] }}</td>
+                    </tr>
+                  </tbody>
+                    {% endfor %}
+            </table>
+    </div>
+</body>
+</html>
