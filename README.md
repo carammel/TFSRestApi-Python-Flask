@@ -1,12 +1,12 @@
-This project is the web application developed by flask. TFS(Azure Devops) Restapi queries is used to show the data on the OnPrem TFS(Azure Devops). 
+I developed this application to see Azure DevOps artifacts. My main approach is to be clear and open to anyone in the company. Everyone should see the results of pipelines, releases, and also who has access to the projects. 
 
-There is a main python file I called it app.py. It contains POST and GET 
+I developed this web app on flask and python. I used Azure Devops Restapi queries to show the data.
+
+There is a main python file I called it app.py. It contains POST and GET requests.
 
 # Flask
 First Flask project for showing datas from TFS(http and https) restapi
 Mixture of TFS RestApi and Flask
 I am tring to make a web page for all people in my company who want to check their project's builds, commits, members ext. 
-Download data to excel and get data of all commits independent from projects. 
 
-P.S.: I wanted to learn Flask and Python. I am DevOps Engineer on an IT company and we uses TFS(Azure Devops), so i developed this project. The frontend is not so cool but it really worked for us. 
-Flask is really simple and usefull programming language and it is really good for begginner developer. When combined 
+Download data to excel and get data of all commits independent from projects. 
